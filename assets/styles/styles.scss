@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
 // VARIABLES
 
@@ -12,10 +12,12 @@ $font-weight-bold: 700;
 $font-size-big: 3.2rem;
 $font-size-text: 1.6rem;
 
-$font-family-text: "Epilogue", sans-serif;
+$font-family-text: 'Epilogue', sans-serif;
 
 $break-point-mobile: 768px;
 $break-point-tablet: 1024px;
+
+$width-sidebar: 24rem;
 
 @media screen and (min-width: 768px) {
   :root {
@@ -59,6 +61,7 @@ ul {
 }
 
 a {
+  color: $color-accent;
   text-decoration: none;
 }
 
@@ -68,10 +71,128 @@ img {
   display: block;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
 // CLASSES
 
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.place-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // z-index: 100;
+}
+
+.nav {
+  padding: 2.4rem 1rem;
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: $width-sidebar;
+    height: 100%;
+    padding: 6rem 2rem 3.5rem;
+    background-color: $color-secondary;
+    transition: 0.3s;
+    z-index: 100;
+
+    &.show-menu {
+      right: 0;
+    }
+
+    &.show-menu ~ .nav__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    color: $color-accent;
+    font-size: $font-size-text;
+    font-family: $font-family-text;
+
+    img {
+      height: 0.7rem;
+    }
+  }
+
+  &__link.button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+    background-color: $color-accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-secondary;
+    font-size: $font-size-text;
+    font-family: $font-family-text;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-accent;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 10;
+  }
 }

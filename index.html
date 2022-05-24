@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/styles/styles.css">
-</head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container flex jc-sb ai-c">
+        <a href="#" class="nav__logo">
+          <img src="assets/images/logo.svg" alt="Snap Logo" />
+        </a>
+        <div class="nav__menu show-menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link flex jc-sb">
+                <span>Features</span>
+                <img src="assets/images/icon-arrow-down.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link flex jc-sb">
+                <span>Company</span>
+                <img src="assets/images/icon-arrow-down.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span>Careers</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span>About</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <button href="#" class="nav__link">
+                <span>Login</span>
+              </button>
+            </li>
+            <li class="nav__item">
+              <button href="#" class="nav__link nav__link--outline">
+                <span>Register</span>
+              </button>
+            </li>
+          </ul>
+          <button class="nav__close pointer" id="nav-close">
+            <img src="assets/images/icon-close-menu.svg" alt="Close button" />
+          </button>
+        </div>
+        <div class="nav__overlay"></div>
+        <button class="nav__toggle pointer" id="nav-toggle">
+          <img src="assets/images/icon-menu.svg" alt="Close button" />
+        </button>
+      </nav>
+    </header>
 
-<body>
+    <!-- Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar. Learn more
 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes,
-  create team rituals, and watch productivity soar.
-
-  Learn more
-
-  <div class="attribution container">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-
+    <div class="attribution container">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="assets/js/index.js"></script>
+  </body>
 </html>
